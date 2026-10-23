@@ -173,6 +173,90 @@ CREATE INDEX IF NOT EXISTS idx_messages_created ON messages(created_at DESC);`;
         </div>
       </div>
 
+      {/* Jawaban Formulir Pengumpulan Proyek Akhir (Wajib Diisi) */}
+      <div className="bg-white border-2 border-blue-300 rounded-2xl p-5 shadow-sm space-y-4">
+        <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="p-1.5 bg-blue-100 text-blue-700 rounded-lg">
+              <CheckCircle2 className="w-5 h-5 text-blue-700" />
+            </span>
+            <div>
+              <h3 className="font-black text-slate-900 text-sm">
+                Jawaban Formulir Submisi Proyek Akhir (Pertanyaan Wajib)
+              </h3>
+              <p className="text-xs text-slate-500">
+                Gunakan tombol salin untuk langsung menempelkan jawaban ke formulir pengumpulan tugas akhir Anda.
+              </p>
+            </div>
+          </div>
+          <span className="text-[11px] font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200 px-2.5 py-1 rounded-full">
+            Siap Dikirim
+          </span>
+        </div>
+
+        <div className="space-y-3 text-xs">
+          {/* Pertanyaan 1 */}
+          <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                <span className="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px]">1</span>
+                <span>Nama project *</span>
+              </span>
+              <button
+                onClick={() => handleCopy('form-q1', 'SMK PGRI 2 Ponorogo AI EduBot (STERIDA AI Assistant)')}
+                className="text-xs font-medium text-blue-700 hover:text-blue-900 flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200 shadow-2xs"
+              >
+                {copiedKey === 'form-q1' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-slate-500" />}
+                <span>{copiedKey === 'form-q1' ? 'Tersalin' : 'Salin Jawaban'}</span>
+              </button>
+            </div>
+            <div className="bg-white p-2.5 rounded-lg border border-slate-200 font-semibold text-slate-800">
+              SMK PGRI 2 Ponorogo AI EduBot (STERIDA AI Assistant)
+            </div>
+          </div>
+
+          {/* Pertanyaan 2 */}
+          <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                <span className="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center text-[10px]">2</span>
+                <span>Siapa target pengguna chatbot Anda? *</span>
+              </span>
+              <button
+                onClick={() => handleCopy('form-q2', 'Target pengguna chatbot ini mencakup: 1) Calon peserta didik baru (siswa SMP/MTs sederajat) dan orang tua/wali murid yang mencari informasi pendaftaran PPDB, rincian biaya, program beasiswa, dan panduan memilih jurusan kejuruan. 2) Siswa aktif SMK PGRI 2 Ponorogo kelas X-XII yang membutuhkan panduan teknis 5 konsentrasi keahlian (TKRO, TBSM, Teknik Pemesinan, RPL, DKV), praktikum, sertifikasi kejuruan, dan seleksi magang industri Jepang. 3) Konselor Bimbingan Konseling (BK) dan guru sebagai asisten konsultasi penjurusan. 4) Alumni dan pencari kerja yang membutuhkan akses informasi lowongan kerja di Bursa Kerja Khusus (BKK) STERIDA Ponorogo bersama mitra Astra Group.')}
+                className="text-xs font-medium text-blue-700 hover:text-blue-900 flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200 shadow-2xs"
+              >
+                {copiedKey === 'form-q2' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-slate-500" />}
+                <span>{copiedKey === 'form-q2' ? 'Tersalin' : 'Salin Jawaban'}</span>
+              </button>
+            </div>
+            <div className="bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700 leading-relaxed">
+              Target pengguna chatbot ini mencakup: <b>1) Calon peserta didik baru</b> (siswa SMP/MTs sederajat) dan orang tua/wali murid yang mencari informasi pendaftaran PPDB, rincian biaya, program beasiswa, dan panduan memilih jurusan kejuruan. <b>2) Siswa aktif SMK PGRI 2 Ponorogo</b> kelas X-XII yang membutuhkan panduan teknis 5 konsentrasi keahlian (TKRO, TBSM, Teknik Pemesinan, RPL, DKV), praktikum, sertifikasi kejuruan, dan seleksi magang industri Jepang. <b>3) Konselor Bimbingan Konseling (BK)</b> dan guru sebagai asisten konsultasi penjurusan. <b>4) Alumni dan pencari kerja</b> yang membutuhkan akses informasi lowongan kerja di Bursa Kerja Khusus (BKK) STERIDA Ponorogo bersama mitra Astra Group.
+            </div>
+          </div>
+
+          {/* Pertanyaan 3 */}
+          <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px]">3</span>
+                <span>Bagaimana chatbot Anda dapat membantu pengguna? *</span>
+              </span>
+              <button
+                onClick={() => handleCopy('form-q3', 'Chatbot ini membantu pengguna melalui: 1) Layanan Konsultasi Cerdas 24/7: Menjawab pertanyaan PPDB, kejuruan, dan fasilitas sekolah secara instan dengan bahasa alami yang luwes. 2) Google Search Grounding Terkini: Mengintegrasikan pencarian web live Google untuk verifikasi informasi terkini dengan sitasi sumber transparan. 3) Kuis Rekomendasi Jurusan (Asesmen Minat): Menganalisis ketertarikan siswa melalui 3 pertanyaan terarah untuk menghitung persentase kecocokan terhadap 5 jurusan vokasi beserta peta karier dan fasilitas bengkel/lab. 4) Parameter Kreatif Personalisasi: Pilihan 4 gaya bahasa (Formal, Santai, Ringkas, Konselor BK), 5 domain pengetahuan khusus, aksesibilitas suara Web Speech (STT mikrofon & TTS audio), serta memori percakapan berkesinambungan. 5) Keamanan & Performa Tinggi: Enkripsi data sensitif baris AES-256-GCM dan caching in-memory Redis dengan latensi sub-15ms.')}
+                className="text-xs font-medium text-blue-700 hover:text-blue-900 flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200 shadow-2xs"
+              >
+                {copiedKey === 'form-q3' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-slate-500" />}
+                <span>{copiedKey === 'form-q3' ? 'Tersalin' : 'Salin Jawaban'}</span>
+              </button>
+            </div>
+            <div className="bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700 leading-relaxed">
+              Chatbot ini membantu pengguna melalui: <b>1) Layanan Konsultasi Cerdas 24/7:</b> Menjawab pertanyaan PPDB, kejuruan, dan fasilitas sekolah secara instan dengan bahasa alami yang luwes. <b>2) Google Search Grounding Terkini:</b> Mengintegrasikan pencarian web live Google untuk verifikasi informasi terkini dengan sitasi sumber transparan. <b>3) Kuis Rekomendasi Jurusan (Asesmen Minat):</b> Menganalisis ketertarikan siswa melalui 3 pertanyaan terarah untuk menghitung persentase kecocokan terhadap 5 jurusan vokasi beserta peta karier dan fasilitas bengkel/lab. <b>4) Parameter Kreatif Personalisasi:</b> Pilihan 4 gaya bahasa (Formal, Santai, Ringkas, Konselor BK), 5 domain pengetahuan khusus, aksesibilitas suara Web Speech (STT mikrofon & TTS audio), serta memori percakapan berkesinambungan. <b>5) Keamanan & Performa Tinggi:</b> Enkripsi data sensitif baris AES-256-GCM dan caching in-memory Redis dengan latensi sub-15ms.
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Cloud Deployment Guides (Merah & Biru) */}
       <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
         <div className="flex items-center gap-2">
