@@ -145,9 +145,9 @@ CREATE INDEX IF NOT EXISTS idx_messages_created ON messages(created_at DESC);`;
             Tautan publik resmi repositori proyek yang memuat seluruh source code, berkas Go microservice, frontend React/Next.js, skema PostgreSQL, dan Docker Compose.
           </p>
           <div className="bg-yellow-50/70 p-2.5 rounded-xl border border-yellow-300 flex items-center justify-between text-xs font-mono text-amber-900 font-bold">
-            <span className="truncate">https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops</span>
+            <span className="truncate">https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot</span>
             <button
-              onClick={() => handleCopy('git-url', 'https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops')}
+              onClick={() => handleCopy('git-url', 'https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot')}
               className="ml-2 text-slate-500 hover:text-slate-900"
             >
               {copiedKey === 'git-url' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-amber-700" />}
@@ -213,7 +213,7 @@ CREATE INDEX IF NOT EXISTS idx_messages_created ON messages(created_at DESC);`;
             </h4>
             <ol className="list-decimal list-inside space-y-1.5 text-slate-700 leading-relaxed font-medium">
               <li>Hubungkan akun GitHub Anda ke <b>Vercel.com</b>.</li>
-              <li>Pilih repositori <code>edubot-gemini-devops</code> dan klik <b>Import</b>.</li>
+              <li>Pilih repositori <code>SMK-PGRI-2-Ponorogo-AI-EduBot</code> dan klik <b>Import</b>.</li>
               <li>Framework preset akan terdeteksi otomatis sebagai <b>Vite</b> / <b>Next.js</b>.</li>
               <li>Konfigurasikan Environment Variables:
                 <div className="mt-1 p-2 rounded bg-white font-mono text-[10px] text-blue-800 border border-blue-200 shadow-2xs font-bold">
@@ -302,7 +302,7 @@ CREATE INDEX IF NOT EXISTS idx_messages_created ON messages(created_at DESC);`;
               </tr>
               <tr className="hover:bg-slate-50/60">
                 <td className="py-2.5 px-3 font-semibold text-slate-900">9. Deliverable 1: GitHub URL</td>
-                <td className="py-2.5 px-3"><code>https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops</code></td>
+                <td className="py-2.5 px-3"><code>https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot</code></td>
                 <td className="py-2.5 px-3 text-amber-700 font-medium">Kartu Repositori</td>
                 <td className="py-2.5 px-3 text-center font-bold text-emerald-600 bg-emerald-50/50">LULUS ✓</td>
               </tr>

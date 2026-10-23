@@ -68,7 +68,7 @@ export const DevOpsStudio: React.FC<DevOpsStudioProps> = ({ metrics, onRefreshMe
     }
   };
 
-  const gitCloneCmd = 'git clone https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops.git';
+  const gitCloneCmd = 'git clone https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot.git';
 
   const handleCopyGit = () => {
     navigator.clipboard.writeText(gitCloneCmd);
@@ -501,7 +501,7 @@ export const DevOpsStudio: React.FC<DevOpsStudioProps> = ({ metrics, onRefreshMe
           </div>
 
           <a
-            href="https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops"
+            href="https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition shadow-sm"

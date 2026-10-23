@@ -21,7 +21,7 @@ Aplikasi ini dikembangkan untuk memenuhi kebutuhan edukasi interaktif bagi **SMK
 - **Caching Layer**: Redis In-Memory Cache (latensi < 10ms untuk pertanyaan berulang).
 - **Keamanan & Kriptografi**: Enkripsi AES-256-GCM dengan *Initialization Vector (IV)* dan *Authentication Tag* untuk perlindungan data percakapan.
 - **DevOps Studio**: Pemantauan real-time telemetri (latensi, cache hit-rate, visualisasi tabel terenkripsi, status model).
-- **URL Repositori GitHub**: [https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops](https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops)
+- **URL Repositori GitHub**: [https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot](https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot)
 - **Screenshots UI**: Tersedia fitur ekspor & tangkapan layar langsung dalam aplikasi.
 
 ---
@@ -87,8 +87,8 @@ Untuk melindungi kerahasiaan identitas dan riwayat percakapan pengguna, sistem m
 
 ```bash
 # 1. Clone repositori
-git clone https://github.com/smk-pgri-2-ponorogo/edubot-gemini-devops.git
-cd edubot-gemini-devops
+git clone https://github.com/yusyhdy/SMK-PGRI-2-Ponorogo-AI-EduBot.git
+cd SMK-PGRI-2-Ponorogo-AI-EduBot
 
 # 2. Salin environment variable
 cp .env.example .env
