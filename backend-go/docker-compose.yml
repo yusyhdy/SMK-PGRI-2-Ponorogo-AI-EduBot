@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  # Next.js / React Frontend Service
+  frontend:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - VITE_API_URL=http://localhost:3000
+    depends_on:
+      - postgres
+      - redis
+    restart: always
+
+  # Golang API Gateway Service (Alternative Native Go Backend)
+  backend-go:
+    build:
+      context: .
+      dockerfile: Dockerfile.go
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DATABASE_URL=postgres://sterida_user:sterida_secure_pass@postgres:5432/smk_pgri_db?sslmode=disable
+      - REDIS_URL=redis://redis:6379/0
+      - ENCRYPTION_SECRET=smk-pgri-2-ponorogo-master-secret-key-2026
+    depends_on:
+      - postgres
+      - redis
+    restart: always
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: smk_postgres_db
+    environment:
+      POSTGRES_USER: sterida_user
+      POSTGRES_PASSWORD: sterida_secure_pass
+      POSTGRES_DB: smk_pgri_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    restart: always
+
+  # Redis In-Memory Cache
+  redis:
+    image: redis:7-alpine
+    container_name: smk_redis_cache
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    restart: always
+
+volumes:
+  pgdata:
+  redisdata:

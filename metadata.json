@@ -1,0 +1,6 @@
+{
+  "name": "SMK PGRI 2 Ponorogo AI EduBot",
+  "description": "Chatbot Edukasi AI untuk SMK PGRI 2 Ponorogo dengan integrasi Gemini API, Google Search Grounding, arsitektur DevOps, enkripsi AES-256, dan caching Redis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
